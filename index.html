@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Etching Simulator</h1>
+  <select id="power"><!-- options here --></select>
+  <select id="etchant"><!-- options here --></select>
+  <button onclick="etch()">Etch!</button>
+  <video id="etchVideo" controls></video>
+  <script>
+    function etch() {
+      const power = document.getElementById("power").value;
+      const etchant = document.getElementById("etchant").value;
+      document.getElementById("etchVideo").src = 
+        `https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID_${power}_${etchant}`;
+    }
+  </script>
+</body>
+</html>
